@@ -14,7 +14,7 @@ Michael\tBrown\tmichael.brown@example.com\tm\tHR\tEmily Davis\temily.davis@examp
 Emily\tDavis\temily.davis@example.com\tf\tHR\tEmily Davis\temily.davis@example.com";
 
 // URL of the web service
-$serviceUrl = 'https://sandbox-thornhillassesment.waocjv.easypanel.host/staff_service.php';
+$serviceUrl = 'http://localhost/staff_service.php';
 
 // Set up cURL
 $ch = curl_init($serviceUrl);
