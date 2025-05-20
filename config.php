@@ -2,10 +2,10 @@
 /**
  * Database configuration
  */
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'staff_database');
-define('DB_USER', 'root');     // Change to appropriate database user
-define('DB_PASS', '');         // Change to appropriate database password
+define('DB_HOST', 'db');
+define('DB_NAME', 'db');
+define('DB_USER', 'db');     // Change to appropriate database user
+define('DB_PASS', 'db');     // Change to appropriate database password
 
 /**
  * Error reporting settings

@@ -142,18 +142,18 @@ function createNewBatch($conn) {
  * @param int $batchId Current batch ID
  */
 function archiveCurrentData($conn, $batchId) {
-    // Mark all existing staff as not current
-    $stmt = $conn->prepare("UPDATE staff SET is_current = FALSE WHERE is_current = TRUE");
-    $stmt->execute();
-    
-    // Archive staff data if needed
+    // First, archive all current staff data
     $stmt = $conn->prepare("
         INSERT INTO staff_archive (staff_id, first_name, surname, email, gender, department_id, batch_id)
         SELECT staff_id, first_name, surname, email, gender, department_id, batch_id
         FROM staff
-        WHERE is_current = FALSE AND batch_id != :batch_id
+        WHERE is_current = TRUE
     ");
-    $stmt->bindParam(':batch_id', $batchId);
+    $stmt->execute();
+    
+    // Then delete all current staff records from the staff table
+    // This completely removes old records instead of just marking them as not current
+    $stmt = $conn->prepare("DELETE FROM staff WHERE is_current = TRUE");
     $stmt->execute();
 }
 

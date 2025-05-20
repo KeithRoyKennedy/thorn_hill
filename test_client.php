@@ -14,7 +14,7 @@ Michael\tBrown\tmichael.brown@example.com\tm\tHR\tEmily Davis\temily.davis@examp
 Emily\tDavis\temily.davis@example.com\tf\tHR\tEmily Davis\temily.davis@example.com";
 
 // URL of the web service
-$serviceUrl = 'http://localhost/thornhill/staff_service.php';
+$serviceUrl = 'https://thorn-hill.ddev.site/staff_service.php';
 
 // Set up cURL
 $ch = curl_init($serviceUrl);
