@@ -2,10 +2,10 @@
 /**
  * Database configuration
  */
-define('DB_HOST', 'sandbox_assesment_db');
-define('DB_NAME', 'thornhill');
-define('DB_USER', 'assesment');     // Change to appropriate database user
-define('DB_PASS', 'c6a9963594a7a305442e');     // Change to appropriate database password
+define('DB_HOST', 'xxxxxxxx');
+define('DB_NAME', 'xxxxxxxx');
+define('DB_USER', 'xxxxxxxx');     // Change to appropriate database user
+define('DB_PASS', 'xxxxxxxx');     // Change to appropriate database password
 
 /**
  * Error reporting settings
